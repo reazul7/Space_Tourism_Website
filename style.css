@@ -98,6 +98,10 @@ input, button, textarea, select {
     gap: var(--gap, 1rem);
 }
 
+.d-block {
+    display: block;
+}
+
 .flow > *:where(:not(:first-child)) {
     margin-top: var(--flow-space, 1rem);
 }
@@ -109,11 +113,19 @@ input, button, textarea, select {
 }
 
 .grid-container {
+    text-align: center;
     display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+}
+
+.grid-container * {
+    max-width: 50ch;
 }
 
 @media (min-width: 45em) {
     .grid-container {
+        text-align: left;
         column-gap: var(--container-gap, 2rem);
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
     }
@@ -126,6 +138,10 @@ input, button, textarea, select {
     .grid-container > *:last-child {
         grid-column: 3;
         outline: 1px solid red;
+    }
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
     }
 }
 
@@ -192,6 +208,7 @@ input, button, textarea, select {
 
 /* components */
 .large-button {
+    font-size: 2rem;
     position: relative;
     display: inline-grid;
     place-items: center;
@@ -219,6 +236,7 @@ input, button, textarea, select {
     opacity: 1;
 }
 
+/* header-area */
 .primary-navigation {
     --gap: 8rem;
     --underline-gap: 2rem;
@@ -269,8 +287,4 @@ input, button, textarea, select {
 .dot-indicators > [aria-selected="true"] {
     border-color:  hsl( var(--clr-white)/1);
     border-color: hsl( var(--clr-white)/1);
-}
-
-.d-block {
-    display: block;
 }
