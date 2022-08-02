@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Barlow:wght@400;700&family=Bellefair&display=swap" rel="stylesheet"> 
+
+    <!-- javascript -->
+    <script src="script.js" defer></script>
         
 </head>
 <body class="home">
@@ -23,7 +26,7 @@
         </div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
         <nav>
-            <ul class="primary-navigation underline-indicators flex">
+            <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
                 <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span>01</span>Home</a></li>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span>02</span>Destination</a></li>
                 <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span>03</span>Crew</a></li>
