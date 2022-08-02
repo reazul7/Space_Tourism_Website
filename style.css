@@ -132,12 +132,10 @@ input, button, textarea, select {
 
     .grid-container > *:first-child {
         grid-column: 2;
-        outline: 1px solid red;
     }
     
     .grid-container > *:last-child {
         grid-column: 3;
-        outline: 1px solid red;
     }
     .grid-container--home {
         padding-bottom: max(6rem, 20vh);
@@ -287,4 +285,35 @@ input, button, textarea, select {
 .dot-indicators > [aria-selected="true"] {
     border-color:  hsl( var(--clr-white)/1);
     border-color: hsl( var(--clr-white)/1);
+}
+
+
+/* homepage-design */
+body {
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .home {
+        background-position: center center;
+        background-image: url(./assets/home/background-home-tablet.jpg);
+    }
+    
+}
+
+@media (min-width: 45rem) {
+    .home {
+        background-image: url(./assets/home/background-home-desktop.jpg);
+    }
+}
+
+@media (max-width: 35rem ) {
+    .m-auto{
+        margin: 0 auto;
+    }
 }
