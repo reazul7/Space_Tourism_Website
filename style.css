@@ -145,7 +145,6 @@ input, button, textarea, select {
 }
 
 
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -156,6 +155,21 @@ input, button, textarea, select {
     clip: rect(0, 0, 0, 0);
     white-space: nowrap;
     border: 0;
+}
+
+.skip-to-content {
+    position: absolute;
+    z-index: 9999;
+    background: hsl( var(--clr-white) );
+    color: hsl( var(--clr-dark) ); 
+    padding: .5em 1em;
+    margin-inline: auto;
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in;
+}
+
+.skip-to-content:focus {
+    transform: translateY(0);
 }
 
 /* color */
