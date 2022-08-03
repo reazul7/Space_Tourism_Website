@@ -323,6 +323,19 @@ input, button, textarea, select {
     .primary-navigation {
         margin-block: 1.5rem;
     }
+    .primary-header::before {
+        content: '';
+        display: block;
+        position: relative;
+        height: 1px;
+        width: 100%;
+        margin-right: -2.5rem;
+        background: hsl( var(--clr-white) / .25);
+        order: 1;
+    }
+    nav {
+        order: 2;
+    }
 }
 
 .underline-indicators > * {
