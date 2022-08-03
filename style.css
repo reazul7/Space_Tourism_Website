@@ -43,6 +43,7 @@
     }
 }
 
+
 /* box-sizing */
 *, *::before, *::after{
     box-sizing: border-box;
@@ -70,6 +71,7 @@ body {
     grid-template-rows: min-content 1fr;
     overflow: hidden;
 }
+
 
 /* form elements font */
 input, button, textarea, select {
@@ -144,7 +146,6 @@ input, button, textarea, select {
     }
 }
 
-
 .sr-only {
     position: absolute;
     width: 1px;
@@ -172,6 +173,7 @@ input, button, textarea, select {
     transform: translateY(0);
 }
 
+
 /* color */
 .bg-dark { background-color: hsl( var(--clr-dark)); }
 .bg-light { background-color: hsl( var(--clr-light)); }
@@ -182,6 +184,7 @@ input, button, textarea, select {
 .text-white { color: hsl( var(--clr-white)); }
 
 .example-component { background-color: hsl( var(--clr-light)); }
+
 
 /* topography */
 .ff-serif { font-family: var(--ff-serif);}
@@ -248,6 +251,7 @@ input, button, textarea, select {
     transform: scale(1.5);
     opacity: 1;
 }
+
 
 /* primary-header && navigation-area */
 .logo {
