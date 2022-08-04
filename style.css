@@ -63,7 +63,7 @@ img, picture {
 body {
     font-family: var(--ff-sans-normal);
     font-size: var(--fs-400);
-    color: hsl( var(--clr-light));
+    color: hsl( var(--clr-white));
     background-color: hsl( var(--clr-dark));
     line-height: 1.5;
     min-height: 100vh;
@@ -420,4 +420,19 @@ body {
     .m-auto{
         margin: 0 auto;
     }
+}
+
+
+/* destination-area */
+.numbered-title {
+    font-family: var(--ff-sans-cond);
+    font-size: var(--fs-500);
+    text-transform: uppercase;
+    letter-spacing: 4.72px; 
+}
+
+.numbered-title span {
+    margin-right: .5em;
+    font-weight: 700;
+    color: hsl( var(--clr-white) / .25);
 }
