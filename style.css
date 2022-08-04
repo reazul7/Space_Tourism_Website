@@ -1,4 +1,4 @@
-/* custom property */
+/* _______ custom property _______ */
 :root {
     /* color */
     --clr-dark: 230 35% 7%;
@@ -44,7 +44,7 @@
 }
 
 
-/* box-sizing */
+/* _______ box-sizing _______ */
 *, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
@@ -73,13 +73,13 @@ body {
 }
 
 
-/* form elements font */
+/* _______ form elements font _______ */
 input, button, textarea, select {
     font: inherit;
 }
 
 
-/* remove animation for turned it off */
+/* _______ remove animation for turned it off _______ */
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -90,7 +90,7 @@ input, button, textarea, select {
 }
 
 
-/* utility classes declared */
+/* _______ utility classes declared _______ */
 .flex {
     display: flex;
     gap: var(--gap, 1rem);
@@ -113,37 +113,6 @@ input, button, textarea, select {
     padding-inline: 2em;
     margin-inline: auto;
     max-width: 80rem;
-}
-
-.grid-container {
-    text-align: center;
-    display: grid;
-    place-items: center;
-    padding-inline: 1rem;
-}
-
-.grid-container * {
-    max-width: 50ch;
-}
-
-@media (min-width: 45em) {
-    .grid-container {
-        text-align: left;
-        column-gap: var(--container-gap, 2rem);
-        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
-    }
-
-    .grid-container > *:first-child {
-        grid-column: 2;
-    }
-    
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
-    .grid-container--home {
-        padding-bottom: max(6rem, 20vh);
-        align-items: end;
-    }
 }
 
 .sr-only {
@@ -174,7 +143,7 @@ input, button, textarea, select {
 }
 
 
-/* color */
+/* _______ color _______ */
 .bg-dark { background-color: hsl( var(--clr-dark)); }
 .bg-light { background-color: hsl( var(--clr-light)); }
 .bg-white { background-color: hsl( var(--clr-white)); }
@@ -186,7 +155,7 @@ input, button, textarea, select {
 .example-component { background-color: hsl( var(--clr-light)); }
 
 
-/* topography */
+/* _______ topography _______ */
 .ff-serif { font-family: var(--ff-serif);}
 .ff-sans-cond { font-family: var(--ff-sans-cond);}
 .ff-sans-normal { font-family: var(--ff-sans-normal);}
@@ -222,7 +191,7 @@ input, button, textarea, select {
 }
 
 
-/* components */
+/* _______ components _______ */
 .large-button {
     font-size: 2rem;
     position: relative;
@@ -253,7 +222,7 @@ input, button, textarea, select {
 }
 
 
-/* primary-header && navigation-area */
+/* _______ primary-header && navigation-area _______ */
 .logo {
     /* margin: 1.5rem clamp(1.5rem, 5vw, 3.5rem); */
     margin: 2rem;
@@ -394,7 +363,7 @@ input, button, textarea, select {
 }
 
 
-/* homepage-background */
+/* _______ homepage-background _______ */
 body {
     background-size: cover;
     background-position: bottom center;
@@ -422,19 +391,78 @@ body {
     .m-auto{
         margin: 0 auto;
     }
+    .tab-list, .destination-info {
+        justify-content: center;
+        text-align: center;
+    }
 }
 
 
-/* destination-layout */
-.grid-container--destination {
-    grid-template-areas: 'title' 'image' 'tabs' 'content';
+/* _______ page-layout _______ */
+.grid-container {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    padding-inline: 1rem;
+    padding-bottom: 4rem;
+}
+
+.grid-container * {
+    max-width: 50ch;
 }
 
 .numbered-title {
     grid-area: title;
 }
 
+
+/* _______ destination-layout _______ */
+.grid-container--destination {
+    grid-template-areas: 'title' 'image' 'tabs' 'content';
+}
+
 .grid-container--destination > img {
     grid-area: image;
     max-width: 60%;
+}
+
+.grid-container--destination > .tab-list {
+    grid-area: tabs;
+}
+
+.grid-container--destination > .destination-info {
+    grid-area: content;
+}
+
+.destination-meta {
+    flex-direction: column;
+    border-top: 1px solid hsl( var(--clr-white) / .1);
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 45em) {
+    .grid-container {
+        text-align: left;
+        column-gap: var(--container-gap, 2rem);
+        grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
+    }
+
+    .grid-container > *:first-child {
+        grid-column: 2;
+    }
+    
+    .grid-container > *:last-child {
+        grid-column: 3;
+    }
+    .grid-container--home {
+        padding-bottom: max(6rem, 20vh);
+        align-items: end;
+    }
+}
+
+@media (max-width: 45em) {
+    .grid-container--destination > img {
+        margin: 0 auto;
+    }
 }
