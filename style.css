@@ -461,16 +461,17 @@ body {
         grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(2rem, 1fr);
     }
 
-    .grid-container > *:first-child {
-        grid-column: 2;
-    }
-    
-    .grid-container > *:last-child {
-        grid-column: 3;
-    }
     .grid-container--home {
         padding-bottom: max(6rem, 20vh);
         align-items: end;
+    }
+
+    .grid-container--home > *:first-child {
+        grid-column: 2;
+    }
+    
+    .grid-container--home > *:last-child {
+        grid-column: 3;
     }
     
     .grid-container--destination {
