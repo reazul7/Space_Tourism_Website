@@ -1,3 +1,4 @@
+// for navigation part
 const nav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 
@@ -16,4 +17,13 @@ navToggle.addEventListener("click", () => {
 
     console.log(visibility);
     console.log(navToggle.getAttribute('aria-expanded'));
+})
+
+
+// for tabs part
+const tabList = document.querySelector('[role="tablist"]');
+const tabs = tabList.querySelectorAll('[role="tab"]');
+
+tabList.addEventListener('keydown', (e) => {
+    console.log(e);
 })
