@@ -1,9 +1,9 @@
 <h2 align="center">
-  e-shopper || E-commerce Website<br/>
-  <a href="https://reazul7.github.io/e-shopper/index.html" target="_blank">Live Site</a>
+  Space Tourism Website<br/>
+  <a href="https://reazul7.github.io/Space_Tourism_Website" target="_blank">Live Site</a>
 </h2>
 <div align="center">
-  <img src="./images/e-shopper view page.png" alt="e-shopper website"/>
+  <img src="./assets/Homepage .png" alt="e-shopper website"/>
 </div>
 
 ## Hi there 👋, I am Reazul Islam Bhuiyan. A MERN Stack Developer & A quick learner. 
@@ -17,14 +17,13 @@
 ## About & Features
 
 
-**e-shopper** is an e-commerce website. 
+**Space Tourism Website** is a single page multi-functional website
 
 
 ### Technology Used: 
 - **HTML**
 - **CSS**
 - **JavaScript**
-- **jQuery**
 
 
 ### Deploy : 
@@ -36,7 +35,7 @@
 
 1. Open your terminal and clone the repository
    ```sh
-   git clone https://github.com/reazul7/e-shopper.git
+   git clone https://github.com/reazul7/Space_Tourism_Website.git
    ```
 2. Open folder named "donate-today-html-css"
 
