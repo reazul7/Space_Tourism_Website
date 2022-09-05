@@ -584,3 +584,10 @@ body {
         grid-column: span 2;
     }
 }
+
+
+/* comming-soon */
+.comming-soon {
+    margin: 0 auto;
+    display: flex;
+}
